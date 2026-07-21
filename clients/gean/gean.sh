@@ -95,7 +95,7 @@ materialize_runtime_local_ip "$CONFIG_DIR"
 
 # HIVE_BOOTNODES is informational here — gean loads bootnodes from
 # "$CONFIG_DIR/nodes.yaml", which the lean simulator is expected to write.
-echo "gean: node=$NODE_ID devnet=$DEVNET_LABEL bootnodes=$BOOTNODES config_dir=$CONFIG_DIR" >&2
+echo "gean: node=$NODE_ID devnet=$DEVNET_LABEL bootnodes=$BOOTNODES checkpoint_sync_url=${HIVE_CHECKPOINT_SYNC_URL:-<none>} config_dir=$CONFIG_DIR" >&2
 
 FLAGS=(
     --custom-network-config-dir "$CONFIG_DIR"
